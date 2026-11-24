@@ -1,0 +1,13 @@
+# Local preview without installing Hugo: `docker compose up`, then open http://localhost:1313/
+services:
+  site:
+    image: ghcr.io/gohugoio/hugo:v0.139.0
+    # --noTimes/--noChmod: Windows/macOS bind mounts reject chtimes/chmod from the container.
+    # --poll: file-change events don't propagate across Windows bind mounts.
+    # --renderToMemory: keep dev output (localhost URLs, drafts) out of public/, which gets deployed.
+    command: server --bind 0.0.0.0 --baseURL http://localhost:1313/ --buildDrafts --renderToMemory --noTimes --noChmod --poll 700ms
+    working_dir: /project
+    volumes:
+      - .:/project
+    ports:
+      - "1313:1313"
