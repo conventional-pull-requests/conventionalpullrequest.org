@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- $title := site.Title }}
+{{- if not .IsHome }}{{ with .Title }}{{ $title = printf "%s | %s" . site.Title }}{{ end }}{{ end }}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ site.Params.description }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ site.Params.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{- end }}

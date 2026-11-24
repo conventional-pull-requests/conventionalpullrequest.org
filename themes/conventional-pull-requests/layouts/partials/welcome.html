@@ -1,0 +1,16 @@
+<section class="welcome">
+  <div class="welcome__inner">
+    <div class="welcome__text">
+      <h1 class="welcome__title">{{ site.Title }}</h1>
+      <p class="welcome__description">{{ site.Params.description }}</p>
+      <div class="welcome__actions">
+        {{- range site.Params.actions }}
+        <a class="button" href="{{ .url }}">{{ .label }}</a>
+        {{- end }}
+      </div>
+    </div>
+    <div class="welcome__art" aria-hidden="true">
+      {{- partial "svg-flow.html" . -}}
+    </div>
+  </div>
+</section>

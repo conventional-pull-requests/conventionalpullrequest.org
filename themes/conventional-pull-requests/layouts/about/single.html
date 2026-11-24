@@ -1,0 +1,8 @@
+{{ define "main" }}
+  {{- partial "mini_welcome.html" . }}
+  <main>
+    <article class="container markdown-body">
+      {{ .Content }}
+    </article>
+  </main>
+{{ end }}

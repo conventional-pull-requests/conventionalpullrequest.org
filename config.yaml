@@ -1,0 +1,45 @@
+baseURL: /
+theme: conventional-pull-requests
+languageCode: en
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+enableRobotsTXT: true
+disableKinds:
+  - taxonomy
+  - term
+  - RSS
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+    parser:
+      autoHeadingIDType: github
+  highlight:
+    noClasses: false
+
+params:
+  # Single source of truth for links back to the repository.
+  repo: https://github.com/conventional-pull-requests/conventionalpullrequest
+  license:
+    name: Creative Commons - CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+
+languages:
+  en:
+    weight: 1
+    languageName: English
+    title: Conventional Pull Requests
+    params:
+      description: A specification for writing pull requests that people and machines can read
+      actions:
+        - label: Quick Summary
+          url: "#summary"
+        - label: Full Specification
+          url: "#specification"
+        - label: Contribute
+          url: https://github.com/conventional-pull-requests/conventionalpullrequest
+      versions:
+        current: v1.0.0-beta.1
+        list:
+          - v1.0.0-beta.1

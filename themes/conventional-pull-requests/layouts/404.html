@@ -1,0 +1,10 @@
+{{ define "main" }}
+  {{- partial "mini_welcome.html" . }}
+  <main>
+    <article class="container markdown-body">
+      <h1>404: Page not found</h1>
+      <p>That page doesn't exist. Read the
+        <a href="{{ printf "%s/" site.Params.versions.current | relLangURL }}">current specification</a> instead.</p>
+    </article>
+  </main>
+{{ end }}

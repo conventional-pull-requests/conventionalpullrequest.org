@@ -1,0 +1,29 @@
+<header class="header">
+  <div class="header__inner">
+    <a class="logo" href="{{ printf "%s/" site.Params.versions.current | relLangURL }}" aria-label="{{ site.Title }} home">
+      {{- partial "svg-logo.html" . -}}
+    </a>
+    <nav class="menu" aria-label="Main">
+      <details class="dropdown">
+        <summary>Versions</summary>
+        <ul>
+          {{- range site.Params.versions.list }}
+          <li><a href="{{ printf "%s/" . | relLangURL }}">{{ . }}</a></li>
+          {{- end }}
+        </ul>
+      </details>
+      {{- if gt (len .AllTranslations) 1 }}
+      <details class="dropdown">
+        <summary>Languages</summary>
+        <ul>
+          {{- range .AllTranslations }}
+          <li><a href="{{ .RelPermalink }}" hreflang="{{ .Language.Lang }}">{{ .Language.LanguageName }}</a></li>
+          {{- end }}
+        </ul>
+      </details>
+      {{- end }}
+      <a href="{{ "about/" | relLangURL }}">About</a>
+      <a class="menu__icon" href="{{ site.Params.repo }}" aria-label="GitHub repository">{{ partial "svg-github.html" . }}</a>
+    </nav>
+  </div>
+</header>
