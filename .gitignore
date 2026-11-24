@@ -1,0 +1,15 @@
+# Hugo build output
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Editors and OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Firebase CLI
+.firebase/
+firebase-debug.log

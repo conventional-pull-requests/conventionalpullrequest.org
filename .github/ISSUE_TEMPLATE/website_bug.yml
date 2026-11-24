@@ -1,0 +1,21 @@
+name: Website bug
+description: Something on the website is broken or displays incorrectly
+title: "fix(site): "
+labels: ["bug", "site"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device

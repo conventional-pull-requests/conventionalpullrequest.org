@@ -1,0 +1,34 @@
+name: Specification change
+description: Propose a new rule, or a change to an existing rule, in the specification
+title: "spec: "
+labels: ["spec"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is missing, unclear or wrong in the current specification?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: The proposed wording, using RFC 2119 keywords where appropriate.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Prior art
+      description: Which projects, platforms or guidelines already do this? The specification consolidates common practice, so links help.
+  - type: dropdown
+    id: breaking
+    attributes:
+      label: Would this make currently valid pull requests invalid?
+      options:
+        - "No"
+        - "Yes"
+        - Not sure
+    validations:
+      required: true
