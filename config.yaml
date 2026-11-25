@@ -20,7 +20,7 @@ markup:
 
 params:
   # Single source of truth for links back to the repository.
-  repo: https://github.com/conventional-pull-requests/conventionalpullrequest
+  repo: https://github.com/conventional-pull-requests/conventionalpullrequest.org
   license:
     name: Creative Commons - CC BY 4.0
     url: https://creativecommons.org/licenses/by/4.0/
@@ -38,7 +38,7 @@ languages:
         - label: Full Specification
           url: "#specification"
         - label: Contribute
-          url: https://github.com/conventional-pull-requests/conventionalpullrequest
+          url: https://github.com/conventional-pull-requests/conventionalpullrequest.org
       versions:
         current: v1.0.0-beta.1
         list:
