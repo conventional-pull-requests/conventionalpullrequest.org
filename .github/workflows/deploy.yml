@@ -1,17 +1,18 @@
+# Builds main and deploys it to the Firebase Hosting live channel.
+# Pull request builds and preview channels are handled by preview.yml.
 name: Build and deploy
 
 on:
   push:
     branches: [main]
-  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: firebase-${{ github.ref }}
-  cancel-in-progress: true
+  group: firebase-live
+  cancel-in-progress: false
 
 env:
   HUGO_VERSION: 0.139.0
@@ -28,7 +29,7 @@ jobs:
           hugo-version: ${{ env.HUGO_VERSION }}
 
       # Uses baseURL "/" from config.yaml, so links are root-relative and work on
-      # the live site, *.web.app, and preview channels alike.
+      # the live site and *.web.app alike.
       - name: Build
         run: hugo --minify --gc
 
@@ -49,32 +50,8 @@ jobs:
           path: public
           retention-days: 1
 
-  deploy-preview:
-    # Fork PRs don't get repository secrets, so skip them.
-    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      checks: write
-      pull-requests: write
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: public
-          path: public
-
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          projectId: ${{ env.FIREBASE_PROJECT_ID }}
-          expires: 7d
-
-  deploy-live:
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+  deploy:
+    if: github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     environment:
@@ -91,6 +68,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CONVENTIONAL_PULL_REQUEST }}
           projectId: ${{ env.FIREBASE_PROJECT_ID }}
           channelId: live
