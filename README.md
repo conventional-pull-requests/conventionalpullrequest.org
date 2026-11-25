@@ -1,6 +1,6 @@
 # Conventional Pull Requests
 
-[![Conventional Pull Requests](https://img.shields.io/badge/Conventional%20Pull%20Requests-1.0.0--beta.1-%234F46E5)](https://github.com/conventional-pull-requests/conventionalpullrequest)
+[![Conventional Pull Requests](https://img.shields.io/badge/Conventional%20Pull%20Requests-1.0.0--beta.1-%234F46E5)](https://github.com/conventional-pull-requests/conventionalpullrequest.org)
 
 A specification for writing pull request titles and descriptions that people and machines can read.
 It builds on [Conventional Commits](https://www.conventionalcommits.org/) and consolidates what
@@ -71,7 +71,7 @@ they define, and CI checks the title.
 Show that your project uses the specification:
 
 ```md
-[![Conventional Pull Requests](https://img.shields.io/badge/Conventional%20Pull%20Requests-1.0.0--beta.1-%234F46E5)](https://github.com/conventional-pull-requests/conventionalpullrequest)
+[![Conventional Pull Requests](https://img.shields.io/badge/Conventional%20Pull%20Requests-1.0.0--beta.1-%234F46E5)](https://github.com/conventional-pull-requests/conventionalpullrequest.org)
 ```
 
 ## License

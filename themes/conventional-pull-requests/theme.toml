@@ -1,8 +1,8 @@
 name = "Conventional Pull Requests"
 license = "MIT"
-licenselink = "https://github.com/conventional-pull-requests/conventionalpullrequest/blob/main/LICENSE"
+licenselink = "https://github.com/conventional-pull-requests/conventionalpullrequest.org/blob/main/LICENSE"
 description = "Single-page specification theme for conventionalpullrequests, modelled on the conventionalcommits.org theme"
-homepage = "https://github.com/conventional-pull-requests/conventionalpullrequest"
+homepage = "https://github.com/conventional-pull-requests/conventionalpullrequest.org"
 tags = ["documentation", "specification", "minimal"]
 features = ["i18n", "versions", "no-javascript"]
 min_version = "0.128.0"

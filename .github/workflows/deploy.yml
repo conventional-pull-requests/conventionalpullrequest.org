@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: firebase-production
-      url: https://${{ env.FIREBASE_PROJECT_ID }}.web.app
+      url: https://conventionalpullrequest.org
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:

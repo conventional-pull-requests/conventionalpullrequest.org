@@ -1,7 +1,7 @@
 <!--
 Title: <type>[optional scope][!]: <description>
        e.g. "docs(spec): clarify footer separators"
-See https://github.com/conventional-pull-requests/conventionalpullrequest/blob/main/content/v1.0.0-beta.1/index.md
+See https://github.com/conventional-pull-requests/conventionalpullrequest.org/blob/main/content/v1.0.0-beta.1/index.md
 -->
 
 ## Summary

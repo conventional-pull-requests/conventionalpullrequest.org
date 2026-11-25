@@ -42,12 +42,12 @@ letter, the specification leaves the choice to each project.
   version bumps from the squashed commits that conventional pull requests produce.
 - [GitHub pull request templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository):
   give contributors the `Summary` and `Testing` sections to fill in. This repository's
-  [template](https://github.com/conventional-pull-requests/conventionalpullrequest/blob/main/.github/pull_request_template.md)
+  [template](https://github.com/conventional-pull-requests/conventionalpullrequest.org/blob/main/.github/pull_request_template.md)
   is a starting point.
 
 ## Projects Using Conventional Pull Requests
 
-- [Conventional Pull Requests](https://github.com/conventional-pull-requests/conventionalpullrequest):
+- [Conventional Pull Requests](https://github.com/conventional-pull-requests/conventionalpullrequest.org):
   this website.
 
 Using the specification in your project? Open a pull request (a conventional one, please) to add it to
