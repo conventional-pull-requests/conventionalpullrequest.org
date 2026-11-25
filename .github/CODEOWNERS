@@ -1,8 +1,7 @@
-# Maintainers review every change. With "Require review from Code Owners" turned on in the
-# main branch ruleset, a pull request cannot merge without approval from this team.
-# The team must exist in the organization and have write access to this repository.
-* @conventional-pull-requests/maintainers
+# The code owner reviews every change. With "Require review from Code Owners" turned on in
+# the main branch ruleset, a pull request cannot merge without their approval.
+* @calvin-fair
 
-# Workflows hold deploy credentials, so changes to them always need a maintainer.
-/.github/ @conventional-pull-requests/maintainers
-/firebase.json @conventional-pull-requests/maintainers
+# Workflows hold deploy credentials, so changes to them always need the code owner.
+/.github/ @calvin-fair
+/firebase.json @calvin-fair
