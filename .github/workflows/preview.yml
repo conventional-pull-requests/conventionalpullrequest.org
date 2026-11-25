@@ -75,8 +75,8 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@500ac625ca2dd40cbd15f7659af953801858032a # v0.11.0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          # A separate service account from production, so the production key can live only
-          # in the firebase-production environment and this one can be revoked on its own.
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PREVIEW }}
+          # Shares the production service account until a separate preview account exists, so this
+          # secret must stay a repository secret (environment secrets aren't visible to this job).
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CONVENTIONAL_PULL_REQUEST }}
           projectId: ${{ env.FIREBASE_PROJECT_ID }}
           expires: 7d
