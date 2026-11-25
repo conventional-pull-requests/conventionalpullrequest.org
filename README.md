@@ -1,7 +1,6 @@
 # Conventional Pull Requests
 
 [![Conventional Pull Requests](https://img.shields.io/badge/Conventional%20Pull%20Requests-1.0.0--beta.1-%234F46E5)](https://github.com/conventional-pull-requests/conventionalpullrequest)
-[![Build](https://github.com/conventional-pull-requests/conventionalpullrequest/actions/workflows/deploy.yml/badge.svg)](https://github.com/conventional-pull-requests/conventionalpullrequest/actions/workflows/deploy.yml)
 
 A specification for writing pull request titles and descriptions that people and machines can read.
 It builds on [Conventional Commits](https://www.conventionalcommits.org/) and consolidates what
